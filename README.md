@@ -23,3 +23,8 @@ To get Autocomplete working for your python distribution, follow the instruction
 - In your Terminal, change directory to ".local/share/nvim/mason/packages/python-lsp-server/venv/"
 - Open "pyvenv.cfg" and change "include-system-site-packages" to true
 - Save and exit
+
+
+Editing a Python script using nvim gives a lot of warnings. The only way I managed to silence some of these errors is by adjusting the pylsp.lua file.
+The pylsp.lua is located in .local/share/nvim/lazy/nvim-lspconfig/lua/lspconfig/server_configurations. To revert the file to its default state, comment
+out the lua block (lines 31-43)
